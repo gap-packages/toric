@@ -1,4 +1,4 @@
- <?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
  <!DOCTYPE Book SYSTEM "gapdoc.dtd">
 
@@ -16,7 +16,7 @@
        &nbsp;
     </Subtitle>
 
-    <Version>Version 1.2</Version> 
+    <Version>Version 1.4</Version> 
     <!-- OPTIONAL -->
     <Author> 
 	    David Joyner<Br/>                 <!-- REQUIRED -->
@@ -27,11 +27,11 @@
 	 Annapolis, MD,<Br/>
          21402 USA.
 	 </Address>
-      <Email> wdj@usna.edu</Email> 
-     <Homepage>http://cadigweb.ew.usna.edu/~wdj/toric/</Homepage>
+      <Email> wdjoyner@gmail.com</Email> 
+     <Homepage>http://www.opensourcemath.org/toric/</Homepage>
    </Author> 
    
-   <Date>October 1, 2005</Date> 
+   <Date>February 26, 2008</Date> 
    <!-- OPTIONAL -->
             <!-- end of title page -->
 
@@ -100,7 +100,7 @@ with more easily than general varieties since often
 times questions about a toric variety can be reformulated in terms
 of combinatorial geometry. 
 
-Some coding theory commands related to toric varities
+Some coding theory commands related to toric varieties
 are contained in the error-correcting codes 
 <Package>GUAVA</Package> package
 (for example, the command <C>ToricCode</C>). 
@@ -300,7 +300,8 @@ of a cone (see <C>Faces</C>).
 The <B>star</B> of a cone <M>\sigma</M> in a 
 fan <M>\Delta</M> is the set <M>\Delta_\sigma</M>
 of cones in <M>\Delta</M> containing <M>\sigma</M> as a face.
-The <Package>toric</Package> package can compute stars (see <C>Star</C>).
+The <Package>toric</Package> package can compute stars 
+(see <C>ToricStar</C>).
 <Index>star</Index>
 
 <P/>
@@ -544,6 +545,7 @@ v:=[4,1]; InDualCone(v,L);
 <E>Input</E>: <A>Perps</A><M>=[v_1,...,v_k]</M> is the list of ``inward normal" 
 vectors perpendicular to the walls of a polytope <M>P</M> in the
 vector space <M>L_0^*\otimes Q</M>,
+<Br></Br>
 <A>A</A><M>=[a_1,...,a_k]</M> is a k-tuple of integers, where
 <M>a_i</M> denotes the amount the i-th ``wall" (defined by the normal <M>v_i</M>)
 is shifted from the origin (each <M>a_i</M> is assumed non-negative).
@@ -614,8 +616,9 @@ Faces(Cones2[2]);
    <Func Name="ConesOfFan" Arg=" Delta k "/>
 		   
         <Description>
-<E>Input</E>: <A>Delta</A> is the fan of cones and
-    <A>k</A> is the dimension of the cones included.
+<E>Input</E>: <A>Delta</A> is the fan of cones,
+<Br></Br>
+<A>k</A> is the dimension of the cones desired.
 <Br></Br>
 <E>Output</E>: The <A>k</A>-dimensional cones in the fan.
         </Description>
@@ -628,8 +631,9 @@ Faces(Cones2[2]);
 <Func Name="NumberOfConesOfFan" Arg=" Delta k "/>
 		   
         <Description>
-<E>Input</E>: <A>Delta</A> is the fan of cones in <M>V=Q^n</M>and
-    <A>k</A> is the dimension of the cones counted.
+<E>Input</E>: <A>Delta</A> is the fan of cones in <M>V=Q^n</M>,
+<Br></Br>
+ <A>k</A> is the dimension of the cones counted.
 <Br></Br>
 <E>Output</E>: The number of <A>k</A>-dimensional cones in the fan.
         </Description>
@@ -668,13 +672,17 @@ NumberOfConesOfFan(Delta0,1);
 
 
 <ManSection>
-   <Func Name="Star" Arg=" sigma, MaxCones "/>
+   <Func Name="ToricStar" Arg=" sigma, Delta "/>
 		   
         <Description>
-This command computes the star of the cone <M>\sigma</M> in a fan
-i.e., the cones <M>\tau</M> which have <M>\sigma</M> as a face. 
-The fan is represented by
-its set of maximal (i.e., highest dimensional) cones.
+<E>Input</E>:  <A>sigma</A> is a cone in the fan,
+represented by its set of maximal (i.e., highest dimensional) cones.
+<Br></Br>
+<A>Delta</A> is the fan of cones in <M>V=Q^n</M>.
+<Br></Br>
+<E>Output</E>: The star of the cone <A>sigma</A> in <A>Delta</A>,
+i.e., the cones <M>\tau</M> which have <A>sigma</A> as a face. 
+
         </Description>
 
 </ManSection>			  
@@ -683,27 +691,27 @@ its set of maximal (i.e., highest dimensional) cones.
 gap> MaxCones:=[ [ [2,0,0],[0,2,0],[0,0,2] ], 
                  [ [2,0,0],[0,2,0],[2,-2,1],[1,2,-2] ] ];;
 gap> #this is the set of maximal cones in the fan Delta
-gap> Star([[1,0]],MaxCones);
+gap> ToricStar([[1,0]],MaxCones);
 [  ]
-gap> Star([[2,0,0],[0,2,0]],MaxCones);
+gap> ToricStar([[2,0,0],[0,2,0]],MaxCones);
 [ [ [ 0, 2, 0 ], [ 2, 0, 0 ] ], [ [ 2, 0, 0 ], [ 0, 2, 0 ], [ 0, 0, 2 ] ],
   [ [ 2, 0, 0 ], [ 0, 2, 0 ], [ 2, -2, 1 ], [ 1, 2, -2 ] ] ]
 gap>
 gap> MaxCones:=[ [ [2,0,0],[0,2,0],[0,0,2] ], [ [2,0,0],[0,2,0],[1,1,-2] ] ];;
-gap> Star([[2,0,0],[0,2,0]],MaxCones);
+gap> ToricStar([[2,0,0],[0,2,0]],MaxCones);
 [ [ [ 0, 2, 0 ], [ 2, 0, 0 ] ], [ [ 2, 0, 0 ], [ 0, 2, 0 ], [ 0, 0, 2 ] ],
   [ [ 2, 0, 0 ], [ 0, 2, 0 ], [ 1, 1, -2 ] ] ]
-gap> Star([[1,0]],MaxCones);
+gap> ToricStar([[1,0]],MaxCones);
 [  ]
 
 </Example>
 <!--
 MaxCones:=[ [ [2,0,0],[0,2,0],[0,0,2] ], [ [2,0,0],[0,2,0],[2,-2,1],[1,2,-2] ] ];;
-Star([[1,0]],MaxCones);
-Star([[2,0,0],[0,2,0]],MaxCones);
+ToricStar([[1,0]],MaxCones);
+ToricStar([[2,0,0],[0,2,0]],MaxCones);
 MaxCones:=[ [ [2,0,0],[0,2,0],[0,0,2] ], [ [2,0,0],[0,2,0],[1,1,-2] ] ];;
-Star([[2,0,0],[0,2,0]],MaxCones);
-Star([[1,0]],MaxCones);
+ToricStar([[2,0,0],[0,2,0]],MaxCones);
+ToricStar([[1,0]],MaxCones);
 -->
 
 </Section>

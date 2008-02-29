@@ -48,11 +48,11 @@ phi:=EmbeddingAffineToricVariety(L);
 
 MaxCones:=[[[2,0,0],[0,2,0],[0,0,2]],[[2,0,0],[0,2,0],[2,-2,1],[1,2,-2]]];;
 #this is the set of maximal cones in the fan Delta
-Star([[1,0]],MaxCones);
-Star([[2,0,0],[0,2,0]],MaxCones);
+ToricStar([[1,0]],MaxCones);
+ToricStar([[2,0,0],[0,2,0]],MaxCones);
 MaxCones:=[ [ [2,0,0],[0,2,0],[0,0,2] ], [ [2,0,0],[0,2,0],[1,1,-2] ] ];;
-Star([[2,0,0],[0,2,0]],MaxCones);
-Star([[1,0]],MaxCones);
+ToricStar([[2,0,0],[0,2,0]],MaxCones);
+ToricStar([[1,0]],MaxCones);
 
 DivisorPolytope([6,6,0],[[2,-1],[-1,2],[-1,-1]]);
 

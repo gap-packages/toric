@@ -1,0 +1,16 @@
+ 
+In this file we record the changes since the first release of
+the TORIC package.
+
+Toric 1.4 - (2-26-2008):
+     - Updated references, minor changes to documentation.
+
+Toric 1.3 - (3-7-2006) 
+     - renamed Star ToricStar to avoid conflict with
+       graphgpd package
+  
+Toric 1.2 - (10-1-2005) now accepted as a GAP package
+     - many changes to the code and manual, as suggested by 
+       the referee
+
+Toric 1.0, 1.1 - initial releases

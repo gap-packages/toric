@@ -178,7 +178,7 @@ DeclareGlobalFunction("ConesOfFan");
 
 #############################################################################
 ##
-#F  Star( <cone>, <Cones> )
+#F  ToricStar( <cone>, <Cones> )
 ##
 ##  Input: Cones is the fan of cones
 ##         <cone> is a cone of <Cones>
@@ -186,7 +186,7 @@ DeclareGlobalFunction("ConesOfFan");
 ##          ie, the cones tau which have <cone> as a face
 ##
 ##
-DeclareGlobalFunction("Star");
+DeclareGlobalFunction("ToricStar");
 
 #############################################################################
 ##

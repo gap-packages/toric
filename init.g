@@ -11,7 +11,7 @@
 ##
 ##  Announce the package version and test for the existence of the binary.
 ##
-DeclarePackage( "toric", "1.2",
+DeclarePackage( "toric", "1.3",
   function()
     local path;
 

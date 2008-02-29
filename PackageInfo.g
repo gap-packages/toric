@@ -9,10 +9,10 @@ SetPackageInfo( rec(
 
   PackageName := "toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.2",
-  Date    := "01/10/2005",
+  Version := "1.4",
+  Date    := "29/02/2008",
   ArchiveURL 
-          := "http://cadigweb.ew.usna.edu/~wdj/gap/toric/toric1.2",
+          := "http://www.opensourcemath.org/toric/toric1.4",
   ArchiveFormats 
           := ".tar.gz",
 
@@ -34,8 +34,8 @@ SetPackageInfo( rec(
       FirstNames    := "David",
       IsAuthor      := true,
       IsMaintainer  := true,
-      Email         := "wdj@usna.edu",
-      WWWHome       := "http://cadigweb.ew.usna.edu/~wdj/homepage.html",
+      Email         := "wdjoyner@gmail.com",
+      WWWHome       := "http://opensourcemath.org/toric/",
       PostalAddress := Concatenation( [
                          "W. David Joyner\n",
                          "Mathematics Department\n",
@@ -64,8 +64,8 @@ SetPackageInfo( rec(
 ##  and updating of the package in the GAP distribution.
 ##  
 
-  README_URL := "http://cadigweb.ew.usna.edu/~wdj/gap/toric/README.toric",
-  PackageInfoURL := "http://cadigweb.ew.usna.edu/~wdj/gap/toric/PackageInfo.g",
+  README_URL := "http://www.opensourcemath.org/toric/README.toric",
+  PackageInfoURL := "http://www.opensourcemath.org/toric/PackageInfo.g",
 
 ##  Here you  must provide a short abstract explaining the package content 
 ##  in HTML format (used on the package overview Web page) and an URL 
@@ -78,7 +78,7 @@ SetPackageInfo( rec(
   AbstractHTML := 
     "<span class=\"pkgname\">toric</span> is a <span class=\"pkgname\">GAP</span>package for computing with toric varieties.",
 
-  PackageWWWHome := "http://cadigweb.ew.usna.edu/~wdj/gap/toric/",
+  PackageWWWHome := "http://www.opensourcemath.org/toric/",
                   
 ##  On the GAP Website there is an online version of all manuals in the
 ##  GAP distribution. To handle the documentation of a package it is
@@ -104,7 +104,7 @@ SetPackageInfo( rec(
     BookName  := "toric",
     ArchiveURLSubset := ["doc", "html"],
     # format/extension can be one of .zoo, .tar.gz, .tar.bz2, -win.zip
-    #Archive   := "http://cadigweb.ew.usna.edu/~wdj/gap/toric/toric1.2.gz",
+    #Archive   := "http://cadigweb.ew.usna.edu/~wdj/gap/toric/toric1.3.gz",
     HTMLStart := "html/chap0.html",
     PDFFile   := "doc/manual.pdf",
     # the path to the .six file used by GAP's help system

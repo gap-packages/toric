@@ -6,7 +6,8 @@
 ##
 #H  @(#)$Id: toric.gi,v 1.0 2004/08/16 22:45:16 gap Exp $
 ##
-##last revised 6-1-2005.
+## 3-6-2006, changed Star to ToricStar, as a method instead of a 
+##           global function
 ##
 Revision.("toric/lib/toric.gi") :=
     "@(#)$Id: toric.gi,v 1.0 8-16-2004 22:45:16 gap Exp $";
@@ -432,7 +433,7 @@ end);
 
 #############################################################################
 ##
-#F  Star( <cone>, <Cones> )
+#F  ToricStar( <cone>, <Cones> )
 ##
 ##  Input: Cones is the fan of cones
 ##         <cone> is a cone of <Cones>
@@ -440,7 +441,7 @@ end);
 ##          ie, the cones tau which have <cone> as a face
 ##
 ##
-InstallGlobalFunction(Star,[IsList,IsList],
+InstallGlobalFunction(ToricStar,[IsList,IsList],
 function(cone,Cones)
 local T,tau,Taus,i,j,sigma,C0,R,Rays,dim;
  sigma:=ShallowCopy(cone);

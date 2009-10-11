@@ -2,6 +2,12 @@
 In this file we record the changes since the first release of
 the TORIC package.
 
+Toric 1.5 - (2009-10-11):
+     - Changed DeclareGlobalFunction("EulerCharacteristic"); to
+       DeclareAttribute( "EulerCharacteristic", IsList ); in toric.gd,
+       changed InstallGlobalFunction("EulerCharacteristic"...)
+       to InstallMethod("EulerCharacteristic",...) in toric.gi.
+
 Toric 1.4 - (2-26-2008):
      - Updated references, minor changes to documentation.
 

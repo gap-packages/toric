@@ -5,7 +5,7 @@
 ###########################################################
 
 
-path := Directory("/Users/wdj/gapfiles/toric1.4/doc");  ## edit path if needed
+path := Directory("/Users/wdj/gapfiles/toric1.5/doc");  ## edit path if needed
 main:="toric.xml"; 
 files:=[];
 bookname:="toric";

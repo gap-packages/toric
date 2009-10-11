@@ -493,7 +493,8 @@ end);
 ##
 ##  Note: X(Delta) **must be non-singular***
 ##
-InstallGlobalFunction(EulerCharacteristic,[IsList],
+## was InstallGlobalFunction(EulerCharacteristic,[IsList],
+InstallMethod(EulerCharacteristic,[IsList],
 function(Cones)
 local sigma,R,Rays,C0,dim;
  C0:=ShallowCopy(Cones);

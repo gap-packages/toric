@@ -209,9 +209,11 @@ DeclareGlobalFunction("BettiNumberToric");
 ##  Output: Euler char of X(Delta), where 
 ##          Delta is a fan defined by its maximal cones, Cones
 ##
-##  Note: X(Delta) **must be non-singular***
+##  Note: X(Delta) **must be non-singular**
 ##
-DeclareGlobalFunction("EulerCharacteristic");
+## was DeclareGlobalFunction("EulerCharacteristic");
+DeclareAttribute( "EulerCharacteristic", IsList );
+
 
 #############################################################################
 ##

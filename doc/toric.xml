@@ -16,7 +16,7 @@
        &nbsp;
     </Subtitle>
 
-    <Version>Version 1.4</Version> 
+    <Version>Version 1.6</Version> 
     <!-- OPTIONAL -->
     <Author> 
 	    David Joyner<Br/>                 <!-- REQUIRED -->
@@ -31,7 +31,7 @@
      <Homepage>http://www.opensourcemath.org/toric/</Homepage>
    </Author> 
    
-   <Date>February 26, 2008</Date> 
+   <Date>December 26, 2009</Date> 
    <!-- OPTIONAL -->
             <!-- end of title page -->
 

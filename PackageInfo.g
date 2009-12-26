@@ -9,10 +9,10 @@ SetPackageInfo( rec(
 
   PackageName := "toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.5",
-  Date    := "11/10/2009",
+  Version := "1.6",
+  Date    := "12/26/2009",
   ArchiveURL 
-          := "http://www.opensourcemath.org/toric/toric1.5",
+          := "http://www.opensourcemath.org/toric/toric1.6",
   ArchiveFormats 
           := ".tar.gz",
 

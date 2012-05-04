@@ -12,6 +12,6 @@
 ##
 #F  Read calls to load all files.  
 ##
-ReadPkg("toric", "lib/util.gi"); 
-ReadPkg("toric", "lib/toric.gi"); 
+ReadPackage("toric", "lib/util.gi"); 
+ReadPackage("toric", "lib/toric.gi"); 
 

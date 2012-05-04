@@ -9,10 +9,10 @@ SetPackageInfo( rec(
 
   PackageName := "toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.7",
-  Date    := "07/09/2011",
+  Version := "1.8",
+  Date    := "03/05/2012",
   ArchiveURL 
-          := "http://www.opensourcemath.org/toric/toric1.7",
+          := "http://www.opensourcemath.org/toric/toric1.8",
   ArchiveFormats 
           := ".tar.gz",
 
@@ -123,7 +123,7 @@ SetPackageInfo( rec(
   Dependencies := rec(
     # GAP version, use version strings for specifying exact versions,
     # prepend a '>=' for specifying a least version.
-    GAP := ">= 4.3",
+    GAP := ">= 4.5",
     # list of pairs [package name, (least) version],  package name is case
     # insensitive, least version denoted with '>=' prepended to version string.
     # without these, the package will not load

@@ -2,7 +2,10 @@
 In this file we record the changes since the first release of
 the TORIC package.
 
-Toric 1.6 - (2011-09-07):
+Toric 1.8 - (2012-05-03):
+     - Minor changes to conform with GAP 4.5
+
+Toric 1.7 - (2011-09-07):
      - changed date format to conform with GAP 4.5
      - Updated manual (with very minor changes)
 

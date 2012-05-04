@@ -14,9 +14,9 @@ This package is licensed under the GPL license, version 2 or later
                      Installing toric
                      ----------------
 
-To install "toric" (as a GAP4 Package) unpack  the  archive  file  in  a
+To install "toric" (as a GAP 4.5 Package) unpack  the  archive  file  in  a
 directory in the `pkg' hierarchy of your version of GAP4. (This  might
-be the `pkg' directory of the GAP4 home directory.) On a *nix
+be the `pkg' directory of the GAP 4.5 home directory.) On a *nix
 system, this is accomplished by (1) copying toric.tar.gz into
 the `pkg' subdirectory, (2) typing (as root, if necessary)
 `tar zxvf toric.tar.gz'.

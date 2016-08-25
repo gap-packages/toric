@@ -8,8 +8,8 @@ related information about them can be calculated.
 "toric" is written entirely in the GAP  language by D. Joyner.
 Please send your  bug reports to support@gap-system.org.
 
-This package is licensed under the GPL license, version 2 or later
-(at your choice).
+This package is licensed under the MIT license.
+
 
                      Installing toric
                      ----------------

@@ -1,24 +1,24 @@
 ############################################################
 #
-# commands to create TORIC documentation using GAPDoc 1.0
+# commands to create TORIC documentation using GAPDoc 1.5.1
 #
 ###########################################################
 
+MakeGAPDocDoc( "doc",     # path to the directory containing the main file
+               "toric",  # the name of the main file (without extension)
+               [ ],      # list of (probably source code) files relative 
+                         # to path which contain pieces of documentation 
+                         # which must be included in the document
+               "toric",  # the name of the book used by GAP's online help
+               "../../..",# optional: relative path to the main GAP root 
+                          # directory to produce HTML files with relative 
+                          # paths to external books.
+               "MathJax"  # optional: use "MathJax", "Tth" and/or "MathML"
+                          # to produce additional variants of HTML files
+               );; 
 
-path := Directory("/Users/wdj/computer_algebra/gapfiles/toric1.8/doc");  ## edit path if needed
-main:="toric.xml"; 
-files:=[];
-bookname:="toric";
-doc := ComposedDocument("GAPDoc", path, main, files, true);;
-r := ParseTreeXMLString(doc[1],doc[2]);; 
-######### with break here if there is an xml compiling error #########
-CheckAndCleanGapDocTree(r);
-t := GAPDoc2Text(r, path);;
-GAPDoc2TextPrintTextFiles(t, path);
-l := GAPDoc2LaTeX(r);;
-FileString(Filename(path, Concatenation(bookname, ".tex")), l);
-AddPageNumbersToSix(r, Filename(path, "manual.pnr"));
-PrintSixFile(Filename(path, "manual.six"), r, bookname);
-h := GAPDoc2HTML(r, path);;
-GAPDoc2HTMLPrintHTMLFiles(h, path);
-MakeGAPDocDoc( path, main, files, bookname);
+# Copy the *.css and *.js files from the styles directory of the GAPDoc 
+# package into the directory containing the package manual.
+CopyHTMLStyleFiles( "doc" );
+
+QUIT;

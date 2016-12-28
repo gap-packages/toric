@@ -38,9 +38,9 @@ SetPackageInfo( rec(
 
 
   PackageWWWHome := "http://www.opensourcemath.org/toric/",
-  README_URL := "http://www.opensourcemath.org/toric/README.toric",
-  PackageInfoURL := "http://www.opensourcemath.org/toric/PackageInfo.g",
-  ArchiveURL := "http://www.opensourcemath.org/toric/toric1.8",
+  README_URL := Concatenation( ~.PackageWWWHome, "README.toric" ),
+  PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+  ArchiveURL := Concatenation( ~.PackageWWWHome, "toric", ~.Version ),
   ArchiveFormats := ".tar.gz",
 
   AbstractHTML := 

@@ -5,10 +5,7 @@
 ##
 ##  This file contains miscellaneous functions
 ##
-#H  @(#)$Id: util.gi,v 1.0 2004/08/16 03:49:21 gap Exp $
 ##
-Revision.("toric/lib/util_gi") :=
-    "@(#)$Id: util.gi,v 1.0 2004/08/16 03:49:21 gap Exp $";
 
 TORIC:=rec();
 

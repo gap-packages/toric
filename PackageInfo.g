@@ -3,7 +3,6 @@
 #W  PackageInfo.g                toric Package                 David Joyner
 ##
 ##
-#H  @(#)$Id: PackageInfo.g,v 1.2 2003/02/14 02:39:41 gap Exp $
 
 SetPackageInfo( rec(
 

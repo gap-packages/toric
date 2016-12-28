@@ -4,13 +4,9 @@
 ##
 ##  this file contains implementations for toric 
 ##
-#H  @(#)$Id: toric.gi,v 1.0 2004/08/16 22:45:16 gap Exp $
-##
 ## 3-6-2006, changed Star to ToricStar, as a method instead of a 
 ##           global function
 ##
-Revision.("toric/lib/toric.gi") :=
-    "@(#)$Id: toric.gi,v 1.0 8-16-2004 22:45:16 gap Exp $";
 
 #############################################################################
 ##

@@ -4,10 +4,7 @@
 ##
 ##  this file contains declarations for toric 
 ##
-#H  @(#)$Id: toric.gd,v 1.1 2004/08/16 22:45:16 gap Exp $
 ##
-Revision.("toric/lib/toric_gd") :=
-    "@(#)$Id: toric.gd,v 1.1 2004/08/16 22:45:16 gap Exp $";
 
 
 #############################################################################

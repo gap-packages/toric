@@ -68,7 +68,7 @@ SetPackageInfo( rec(
 
   Autoload := false,
 
-#TestFile := "toric/toric_examples.test",
+  TestFile := "tst/testall.g",
 
   Keywords := [ "toric variety", "cone", "fan", "Riemann-Roch space" ]
 

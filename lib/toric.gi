@@ -109,7 +109,7 @@ local u,V,d,R,i,j,N,B,b0,J,terms,a,b,d0;
  Assert(1, B = a - b);
  terms:=[];
  for j in [1..b0] do 
-  terms[j]:= Product(List([1..d],i->X(Rationals,i)^(a[j][i])))
+  terms[j]:= Product(List([1..d0],i->X(Rationals,i)^(a[j][i])))
             -Product(List([1..d0],i->X(Rationals,i)^(b[j][i])));
  od;
  J:=Ideal(R,terms);

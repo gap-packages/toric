@@ -794,10 +794,12 @@ allocation.
 </ManSection>			  
 
 <Example>
-gap> J:=IdealAffineToricVariety([[1,0],[3,4]]);
-[ two-sided ideal in PolynomialRing(..., [ x_1, x_2 ]), (3 generators) ]
+<![CDATA[
+gap> J:=IdealAffineToricVariety([[0,1],[2,-1]]);
+<two-sided ideal in Rationals[x_1,x_2,x_3], (1 generators)>
 gap> GeneratorsOfIdeal(J);
-[ -x_2^2+x_1, -x_2^3+x_1^2, -x_2^4+x_1^3 ]
+[ -x_2^2+x_1 ]
+]]>
 </Example>
 
 <ManSection>

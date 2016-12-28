@@ -87,39 +87,30 @@ end);
 ##  
 InstallGlobalFunction(IdealAffineToricVariety,[IsList],
 function(L)
-local u,V,O,m,d,R,M,i,j,N,B,b0,J,terms,a,b,d0;
+local u,V,d,R,i,j,N,B,b0,J,terms,a,b,d0;
  TORIC.consistent_vectors(L);
  u:=DualSemigroupGenerators(L);
  d:=Length(u[1]);
  V:=Rationals^d;
- O:=0*u[1];
- RemoveSet(u,O);
- m:=Size(u);
- M:=NullMat(m,d);
- for i in [1..m] do
-  for j in [1..d] do
-    M[i][j]:=u[i][j];
-  od;
- od;
- B:=NullspaceIntMat(M);
- b0:=Size(B);
+ u:=Filtered(u,v->not IsZero(v));
+ B:=NullspaceIntMat(u);
+ b0:=Length(B);
  if b0 = 0 then return R; fi; 
- a:=[];
- b:=[];
- d0:=Size(B[1]);
+ d0:=Length(B[1]);
  R:=PolynomialRing(Rationals,d0); 
- for i in [1..b0] do a[i]:=[]; od;
- for i in [1..d0] do b[i]:=[]; od;
+ a:=NullMat(b0,d0);
+ b:=NullMat(b0,d0);
  for i in [1..b0] do
     for j in [1..d0] do
-     if B[i][j] >= 0 then a[i][j]:=B[i][j]; else a[i][j]:=0; fi;
-     if B[i][j] < 0 then b[i][j]:=-B[i][j]; else b[i][j]:=0; fi;
+     if B[i][j] >= 0 then a[i][j]:= B[i][j];
+     else                 b[i][j]:=-B[i][j];   fi;
     od;
  od;
+ Assert(1, B = a - b);
  terms:=[];
  for j in [1..b0] do 
-  terms[j]:= Product(List([1..d],i->X(Rationals,i)^(a[j][i])))- 
- Product(List([1..d0],i->X(Rationals,i)^(b[j][i])));
+  terms[j]:= Product(List([1..d],i->X(Rationals,i)^(a[j][i])))
+            -Product(List([1..d0],i->X(Rationals,i)^(b[j][i])));
  od;
  J:=Ideal(R,terms);
  return J;

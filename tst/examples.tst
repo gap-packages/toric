@@ -96,14 +96,6 @@ gap> ToricStar([[1,0]],MaxCones);
 #
 
 #
-# FIXME: see https://github.com/gap-packages/toric/issues/4
-#
-#gap> J:=IdealAffineToricVariety([[1,0],[3,4]]);
-#[ two-sided ideal in PolynomialRing(..., [ x_1, x_2 ]), (3 generators) ]
-#gap> GeneratorsOfIdeal(J);
-#[ -x_2^2+x_1, -x_2^3+x_1^2, -x_2^4+x_1^3 ]
-
-#
 gap> phi:=EmbeddingAffineToricVariety([[1,0],[3,4]]);
 [ x_2, x_1, x_1^2/x_4, x_1^3/x_4^2, x_1^4/x_4^3 ]
 gap> L:=[[1,0,0],[1,1,0],[1,1,1],[1,0,1]];;

@@ -6,10 +6,10 @@
 
 SetPackageInfo( rec(
 
-  PackageName := "toric",
+  PackageName := "Toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.8dev",
-  Date    := "03/05/2012",
+  Version := "1.9",
+  Date    := "01/02/2017",
 
   Persons := [ 
     rec( 
@@ -18,7 +18,7 @@ SetPackageInfo( rec(
       IsAuthor      := true,
       IsMaintainer  := true,
       Email         := "wdjoyner@gmail.com",
-      WWWHome       := "http://opensourcemath.org/toric/",
+      WWWHome       := "https://sites.google.com/site/wdjoyner/toric",
       PostalAddress := Concatenation( [
                          "W. David Joyner\n",
                          "Mathematics Department\n",
@@ -70,6 +70,39 @@ SetPackageInfo( rec(
 
   TestFile := "tst/testall.g",
 
-  Keywords := [ "toric variety", "cone", "fan", "Riemann-Roch space" ]
+  Keywords := [ "toric variety", "cone", "fan", "Riemann-Roch space" ],
 
+  AutoDoc := rec(
+    TitlePage := rec(
+      Copyright := "&copyright; 2004-2017 David Joyner.",
+      Acknowledgements :=
+"""
+The code for the <Package>toric</Package> package was written during the
+summer of 2002. 
+It was put into &GAP; package format in the summer of 2004.
+
+<Package>toric</Package> is released under the 
+GNU General Public License (GPL), version 2 or better (at your choice).
+This file is part of <Package>toric</Package>, though as documentation
+it is released under the
+GNU Free Documentation License
+(see <URL>http://www.gnu.org/licenses/licenses.html#FDL</URL>).
+<P/>
+    <Package>toric</Package> is free software; you can redistribute it and/or modify
+    it under the terms of the MIT License.
+<P/>
+    <Package>toric</Package> is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    MIT License for more details.
+<P/>
+
+<P/>This documentation was prepared with the 
+<Package>GAPDoc</Package> package of Frank Lübeck and Max Neunhöffer. 
+Moreover, a bug in toric 1.8 was fixed with the help of Max Horn, and this
+documentation was modified accordingly. Finally, I thank Alexander Konovalov
+and Max Horn for transferring this package to the new GIT repo.
+"""
+        ),
+    ),
 ));

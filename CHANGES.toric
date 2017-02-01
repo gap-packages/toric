@@ -2,6 +2,10 @@ In this file we record the changes since the first release of
 the TORIC package.
 
 Toric 1.X - (2017-MM-DD)
+  - Moved package to GitHub
+  - Added MIT license
+  - Added a test suite (based on existing examples)
+  - Removed access to the obsolete global variable `Revision`
   - Removed IdealAffineToricVariety -- it returned incorrect
     results and fixing it was non-trivial.
 

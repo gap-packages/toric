@@ -1,0 +1,32 @@
+  
+  
+  [1XIndex[101X
+  
+  affine toric variety  1.2-3
+  [2XBettiNumberToric[102X  4.2-2
+  [2XCardinalityOfToricVariety[102X  4.3-1
+  cone  1.2-2
+  cone, nonsingular  1.2-3
+  [2XConesOfFan[102X  2.1-5
+  [2XDivisorPolytope[102X  4.1-1
+  [2XDivisorPolytopeLatticePoints[102X  4.1-2
+  dual cone  1.2-2
+  [2XDualSemigroupGenerators[102X  2.2-1
+  [2XEmbeddingAffineToricVariety[102X  3.1-1
+  [2XEulerCharacteristic[102X  4.2-1
+  [2XFaces[102X  2.1-4
+  fan  1.2-2
+  [2XInDualCone[102X  2.1-2
+  [2XInsideCone[102X  2.1-1
+  [2XNumberOfConesOfFan[102X  2.1-6
+  polytope associated to divisor  1.2-4
+  [2XPolytopeLatticePoints[102X  2.1-3
+  ray  1.2-2
+  [2XRiemannRochBasis[102X  4.1-3
+  semigroup associated to cone  1.2-2
+  star  1.2-2
+  [2XToricStar[102X  2.1-7
+  Weil divisors  1.2-4
+  
+  
+  -------------------------------------------------------

@@ -1,0 +1,25 @@
+  
+  [1X3 [33X[0;0YAffine toric varieties[133X[101X
+  
+  [33X[0;0YThis chapter concerns [5Xtoric[105X commands which deal with the coordinate rings of
+  affine toric varieties [22XU_σ[122X.[133X
+  
+  
+  [1X3.1 [33X[0;0YIdeals defining affine toric varieties[133X[101X
+  
+  [1X3.1-1 EmbeddingAffineToricVariety[101X
+  
+  [29X[2XEmbeddingAffineToricVariety[102X( [3XL[103X ) [32X function
+  
+  [33X[0;0Y[13XInput[113X: [3XL[103X is a list generating a cone (as in [10XDualSemigroupGenerators[110X).[133X
+  [33X[0;0Y[13XOutput[113X:  the  toroidal  embedding  of [22XX=Spec(I)[122X, where I is the ideal of the
+  affine toric variety (given as a list of multinomials).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xphi:=EmbeddingAffineToricVariety([[1,0],[3,4]]);[127X[104X
+    [4X[28X[ x_2, x_1, x_1^2/x_4, x_1^3/x_4^2, x_1^4/x_4^3 ][128X[104X
+    [4X[25Xgap>[125X [27XL:=[[1,0,0],[1,1,0],[1,1,1],[1,0,1]];;[127X[104X
+    [4X[25Xgap>[125X [27Xphi:=EmbeddingAffineToricVariety(L);[127X[104X
+    [4X[28X[ x_3, x_2, x_1/x_5, x_1/x_6 ][128X[104X
+  [4X[32X[104X
+  

@@ -1,0 +1,227 @@
+  
+  [1X1 [33X[0;0YIntroduction[133X[101X
+  
+  
+  [1X1.1 [33X[0;0YIntroduction to the [5Xtoric[105X[101X[1X package[133X[101X
+  
+  [33X[0;0YThis  manual describes the [5Xtoric[105X package for working with toric varieties in
+  [5XGAP[105X.  Toric  varieties  can be dealt with more easily than general varieties
+  since  often  times  questions  about a toric variety can be reformulated in
+  terms  of  combinatorial  geometry.  Some  coding theory commands related to
+  toric  varieties  are  contained in the error-correcting codes [5XGUAVA[105X package
+  (for  example,  the  command [10XToricCode[110X). We refer to the [5XGUAVA[105X manual [CM09]
+  and the expository paper [JV02] for more details.[133X
+  
+  [33X[0;0YThe  [5Xtoric[105X  package  also  contains  several  commands  unrelated  to  toric
+  varieties  (mostly  for  list manipulations). These will not be described in
+  this documention but they are briefly documented in the [10Xlib/util.gd[110X file.[133X
+  
+  [33X[0;0Y[5Xtoric[105X  is implemented in the [5XGAP[105X language, and runs on any system supporting
+  [5XGAP[105X4.3 and above. The [5Xtoric[105X package is loaded with the command[133X
+  
+   gap> LoadPackage( "toric" ); 
+  
+  [33X[0;0YPlease  send  bug  reports,  suggestions  and  other comments about [5Xtoric[105X to
+  [7Xmailto:support@gap-system.org[107X.[133X
+  
+  
+  [1X1.2 [33X[0;0YIntroduction to constructing toric varieties[133X[101X
+  
+  [33X[0;0YRather  than  sketch  the  theory of toric varieties, we refer to [JV02] and
+  [Ful93]  for  details.  However,  we  briefly  describe some terminology and
+  notation.[133X
+  
+  
+  [1X1.2-1 [33X[0;0YGeneralities[133X[101X
+  
+  [33X[0;0YLet  [22XF[122X  denote  a  field  and  [22XR=F [x_1,...,x_n][122X be a ring in [22Xn[122X variables. A
+  [12Xbinomial equation[112X in [22XR[122X is one of the form[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Yx_1^{k_1}...x_n^{k_n}=x_1^{\ell_1}...x_n^{\ell_n},[133X [124X[133X
+  
+  
+  [33X[0;0Ywhere  [22Xk_i  ≥ 0, ℓ_j ≥ 0[122X are integers. A binomial variety is a subvariety of
+  affine  [22Xn[122X-space  [22XA_F^n[122X defined by a finite set of binomial equations (such a
+  variety need not be normal). A typical ``toric variety'' is binomial, though
+  they  will be introduced via an [13Xa priori[113X independent construction. The basic
+  idea  of the construction is to replace each such binomial equation as above
+  by  a  relation  in  a semigroup contained in a lattice and replace [22XR[122X by the
+  ``group  algebra''  of this semigroup. By the way, a toric variety is always
+  normal (see for example, [Ful93], page 29).[133X
+  
+  
+  [1X1.2-2 [33X[0;0YBasic combinatorial geometry constructions[133X[101X
+  
+  [33X[0;0YLet [22XQ[122X denote the field of rational numbers and [22XZ[122X denote the set of integers.
+  Let [22Xn>1[122X denote an integer.[133X
+  
+  [33X[0;0YLet [23XV=Q^n[123X having basis [22Xf_1=(1,0,...,0)[122X, ..., [22Xf_n=(0,...,0,1)[122X. Let [22XL_0=Z^n⊂ V[122X
+  be  the  standard  lattice in [22XV[122X. We identify [22XV[122X and [22XL_0⊗_Z Q[122X. We use [22X⟨ , ⟩[122X to
+  denote the (standard) inner product on [22XV[122X. Let[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0YL_0^*={\rm Hom}(L_0,Z)=\{ v\in V\ |\ \langle v,w \rangle \in Z, \
+        \forall w\in L_0\}[133X [124X[133X
+  
+  
+  [33X[0;0Ydenote  the [12Xdual lattice[112X, so (fixing the standard basis [22Xe_1^*[122X,...,[22Xe_n^*[122X dual
+  to the [22Xf_1[122X,...,[22Xf_n[122X) [22XL_0^*[122X may be identified with [22XZ^n[122X.[133X
+  
+  [33X[0;0YA [12Xcone[112X in [22XV[122X is a set [22Xσ[122X of the form[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Y\sigma=\{a_1v_1+...+a_mv_m\ |\ a_i\geq 0\}\subset V,[133X [124X[133X
+  
+  
+  [33X[0;0Ywhere  [22Xv_1,...,v_m  ∈ V[122X is a given collection of vectors, called (semigroup)
+  [12Xgenerators[112X  of [22Xσ[122X. A [12Xrational cone[112X is one where [22Xv_1,...,v_m ∈ L_0[122X. A [12Xstrongly
+  convex[112X cone is one which contains no lines through the origin.[133X
+  
+  [33X[0;0Y[13X  By  abuse  of  terminology, from now on a [12Xcone[112X of [22XL_0[122X is a strongly convex
+  rational cone. [113X[133X
+  
+  [33X[0;0YA  [12Xface[112X of a cone [22Xσ[122X is either [22Xσ[122X itself or a subset of the form [22XH∩ σ[122X, where [22XH[122X
+  is  a  codimension one subspace of [22XV[122X which intersects the cone non-trivially
+  and  such  that  the cone is contained in exactly one of the two half-spaces
+  determined  by  [22XH[122X.  A  [12Xray[112X  (or  edge)  of a cone is a one-dimensional face.
+  Typically,  cones  are  represented in [5Xtoric[105X by the list of vectors defining
+  their  rays. The [12Xdimension[112X of a cone is the dimension of the vector space it
+  spans.  The [5Xtoric[105X package can test if a given vector is in a given cone (see
+  [10XInsideCone[110X).[133X
+  
+  [33X[0;0YIf [22Xσ[122X is a cone then the [12Xdual cone[112X is defined by[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Y\sigma^* =\{w \in L_0^*\otimes Q \ |\ \langle v,w \rangle \geq 0,\
+        \forall v\in \sigma\}.[133X [124X[133X
+  
+  
+  [33X[0;0YThe  [5Xtoric[105X  package can test if a vector is in the dual of a given cone (see
+  [10XInDualCone[110X).[133X
+  
+  [33X[0;0YAssociate to the dual cone [22Xσ^*[122X is the semigroup[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0YS_\sigma =\sigma^*\cap L_0^* =\{w\in L_0^* \ |\ \langle v,w\rangle
+        \geq 0,\ \forall v\in \sigma\}.[133X [124X[133X
+  
+  
+  [33X[0;0YThough  [22XL_0^*[122X  has $n$ generators [13Xas a lattice[113X, typically [22XS_σ[122X will have more
+  than  [22Xn[122X  generators  [13Xas a semigroup[113X. The [5Xtoric[105X package can compute a minimal
+  list of semigroup generators of [22XS_σ[122X (see [10XDualSemigroupGenerators[110X).[133X
+  
+  [33X[0;0YA  fan is a collection of cones which ``fit together'' well. A [12Xfan[112X in [22XL_0[122X is
+  a set [22X∆={σ }[122X of rational strongly convex cones in [22XV= L_0 ⊗ Q[122X such that[133X
+  
+  [30X    [33X[0;6Yif [22Xσ ∈ ∆[122X and [22Xτ ⊂ σ[122X is a face of [22Xσ[122X then [22Xτ ∈ ∆[122X,[133X
+  
+  [30X    [33X[0;6Yif  [22Xσ_1, σ_2 ∈ ∆[122X then the intersection [22Xσ_1 ∩ σ_2[122X is a face of both [22Xσ_1[122X
+        and [22Xσ_2[122X (and hence belongs to [22X∆[122X).[133X
+  
+  [33X[0;0YIn particular, the face of a cone in a fan is a cone is the fan.[133X
+  
+  [33X[0;0YIf  [22XV[122X  is  the  (set-theoretic) union of the cones in [22X∆[122X then we call the fan
+  [12Xcomplete[112X.  We  shall assume that all fans are finite. A fan is determined by
+  its list of maximal cones.[133X
+  
+  [33X[0;0Y[13XNotation[113X:  A  fan  [22X∆[122X  is represented in [5Xtoric[105X as a set of maximal cones. For
+  example,  if  [22X∆[122X  is the fan with maximal cones [22Xσ_1=Q_+⋅ f_1+Q_+⋅ (-f_1+f_2)[122X,
+  [22Xσ_2=Q_+⋅ (-f_1+f_2)+Q_+⋅ (-f_1-f_2)[122X, [22Xσ_3=Q_+⋅ (-f_1-f_2)+Q_+⋅ f_1[122X, then [22X∆[122X is
+  represented by [22X[[[1,0],[-1,1]],[[-1,1],[-1,-1]],[[-1,-1],[1,0]]][122X.[133X
+  
+  [33X[0;0YThe  [5Xtoric[105X  package can compute all cones in a fan of a given dimension (see
+  [10XConesOfFan[110X).  Moreover,  [5Xtoric[105X  can compute the set of all normal vectors to
+  the faces (i.e., hyperplanes) of a cone (see [10XFaces[110X).[133X
+  
+  [33X[0;0YThe [12Xstar[112X of a cone [22Xσ[122X in a fan [22X∆[122X is the set [22X∆_σ[122X of cones in [22X∆[122X containing [22Xσ[122X as
+  a face. The [5Xtoric[105X package can compute stars (see [10XToricStar[110X).[133X
+  
+  
+  [1X1.2-3 [33X[0;0YBasic affine toric variety constructions[133X[101X
+  
+  [33X[0;0YLet[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0YR_\sigma = F [S_\sigma][133X [124X[133X
+  
+  
+  [33X[0;0Ydenote  the  ``group algebra'' of this semigroup. It is a finitely generated
+  commutative  F-algebra.  It is in fact integrally closed ([Ful93], page 29).
+  We  may  interprete [22XR_σ[122X as a subring of [22XR=F [x_1,...,x_n][122X as follows: First,
+  identify  each  [22Xe_i^*[122X  with  the  variable  [22Xx_i[122X.  If  [22XS_σ[122X  is generated as a
+  semigroup  by  vectors  of the form [22Xℓ_1 e_1^*+...+ℓ_n e_n^*[122X, where [22Xℓ_i[122X is an
+  integer,  then  its  image  in  [22XR[122X  is  generated  by  monomials  of the form
+  [22Xx_1^ℓ_1dots   x_n^ℓ_n[122X.  The  [5Xtoric[105X  package  can  compute  these  generating
+  monomials  (see  [10XEmbeddingAffineToricVariety[110X).  See Lemma 2.14 in [JV02] for
+  more details. This embedding can also be used to resolve singularities - see
+  section 5 of [JV02] for more details.[133X
+  
+  [33X[0;0YLet[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0YU_\sigma={\rm Spec}\ R_\sigma.[133X [124X[133X
+  
+  
+  [33X[0;0YThis defines an [12Xaffine toric variety[112X (associated to [22Xσ[122X). It is known that the
+  coordinate  ring  [22XR_σ[122X  of  the  affine  toric variety [22XU_σ[122X has the form [22XR_σ =
+  F[x_1,...,x_n]/J[122X,  where  [22XJ[122X  is  an  ideal.  The  [5Xtoric[105X  package can compute
+  generators  of  this  ideal  by  using  the  [10XDualSemigroupGenerators[110X and the
+  [10XEmbeddingAffineToricVariety[110X commands.[133X
+  
+  [33X[0;0YRoughly speaking, the toric variety [22XX(∆)[122X associated to the fan [22X∆[122X is given by
+  a collection of affine pieces $U_{\sigma_1},U_{\sigma_2},\dots,U_{\sigma_d}$
+  which  ``glue''  together  (where [22X∆ = {σ_i}[122X). The affine pieces are given by
+  the  zero sets of polynomial equations in some affine spaces and the gluings
+  are  given  by  maps  [22Xϕ_i,j  :  U_σ_i → U_σ_j[122X which are defined by ratios of
+  polynomials  on  open  subsets of the $U_{\sigma_i}$. The [5Xtoric[105X package does
+  [13Xnot[113X compute these gluings or work directly with these (non-affine) varieties
+  [22XX(∆)[122X.[133X
+  
+  [33X[0;0YA cone [22Xσ ⊂ V[122X is said to be [12Xnonsingular[112X if it is generated by part of a basis
+  for  the  lattice [22XL_0[122X. A fan [22X∆[122X of cones is said to be [12Xnonsingular[112X if all its
+  cones  are nonsingular. It is known that [22XU_σ[122X is nonsingular if and only if [22Xσ[122X
+  is nonsingular (Proposition 2.1 in [Ful93]).[133X
+  
+  [33X[0;0Y[12XExample:[112X In three dimensions, consider the cones [22Xσ_ϵ_1,ϵ_2,ϵ_3,i,j[122X generated
+  by  [22X(ϵ_1⋅  1,ϵ_2⋅  1,ϵ_3⋅  1)[122X  and the standard basis vectors [22Xf_i,f_j[122X, where
+  [22Xϵ_i=±  1[122X  and [22X1≤ inot= j≤ 3[122X. There are 8 cones per octant, for a total of 64
+  cones.  Let [22X∆[122X denote the fan in [22XV=Q^3[122X determined by these maximal cones. The
+  toric variety [22XX(∆)[122X is nonsingular.[133X
+  
+  
+  [1X1.2-4 [33X[0;0YRiemann-Roch spaces and related constructions[133X[101X
+  
+  [33X[0;0YAlthough  the  [5Xtoric[105X package does not work directly with the toric varieties
+  [22XX(∆)[122X, it can compute objects associated with it. For example, it can compute
+  the  Euler  characteristic  (see  [10XEulerCharacteristic[110X),  Betti  numbers (see
+  [10XBettiNumberToric[110X),   and   the   number   of   GF(q)-rational   points  (see
+  [10XCardinalityOfToricVariety[110X) of [22XX(∆)[122X, [13X provided [22X∆[122X is nonsingular.[113X[133X
+  
+  [33X[0;0YFor  an  algebraic  variety [22XX[122X the group of [12XWeil divisors[112X on [22XX[122X is the abelian
+  group  [22XDiv(X)[122X generated (additively) by the irreducible subvarieties of X of
+  codimension  [22X1[122X.  For  a  toric  variety [22XX(∆)[122X with dense open torus [22XT[122X, a Weil
+  divisor  D  is [12XT-invariant[112X if [22XD=T⋅ D[122X. The group of [22XT[122X-invariant Weil divisors
+  is denoted [22XTDiv(X)[122X. This is finitely generated by an explicitly given finite
+  set of divisors [22X{D_1,...,D_r}[122X which correspond naturally to certain cones in
+  [22X∆[122X  (see [Ful93] for details). In particular, we may represent such a divisor
+  [22XD[122X in [22XTDiv(X)[122X by an [22Xk[122X-tuple [22X(d_1,...,d_k)[122X of integers.[133X
+  
+  [33X[0;0YLet  [22X∆[122X  denote a fan in [22XV=Q^n[122X with rays (or edges) [22Xτ_i[122X, [22X1≤ i≤ k[122X, and let [22Xv_i[122X
+  denote  the  first  lattice point on [22Xτ_i[122X. Associated to the T-invariant Weil
+  divisor [22XD=d_1D_1+...+d_kD_k[122X, is the [12Xpolytope[112X[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0YP_D = \{ x=(x_1,...,x_n)\ |\ \langle x,v_i \rangle \geq -d_i, \
+        \forall 1 \leq i \leq k\}.[133X [124X[133X
+  
+  
+  [33X[0;0YThe  [5Xtoric[105X package can compute [22XP_D[122X (see [10XDivisorPolytope[110X), as well as the set
+  of    all    lattice    points    contained    in    this    polytope   (see
+  [10XDivisorPolytopeLatticePoints[110X).  Also  associated  to  the  [22XT[122X-invariant  Weil
+  divisor  [22XD=d_1D_1+...+d_kD_k[122X,  is  the  Riemann-Roch  space, [22XL(D)[122X. This is a
+  space  of  functions  on  [22XX(∆)[122X whose zeros and poles are ``controlled'' by [22XD[122X
+  (for  a more precise definition, see [Ful93]). The [5Xtoric[105X package can compute
+  a  basis  for  [22XL(D)[122X  (see  [10XRiemannRochBasis[110X),  [13X  provided  [22X∆[122X is complete and
+  nonsingular.[113X[133X
+  

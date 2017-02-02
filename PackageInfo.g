@@ -1,102 +1,108 @@
 #############################################################################
-##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
+##
+#W  PackageInfo.g                toric Package                 David Joyner
+##
 ##
 
 SetPackageInfo( rec(
 
-PackageName := "GitHubPagesForGAP",
+  PackageName := "Toric",
+    Subtitle  := "toric varieties and some combinatorial geometry computations",
+  Version := "1.9",
+  Date    := "01/02/2017",
 
-Subtitle := "A GitHubPages generator for GAP packages",
-Version := "0.1",
-Date := "21/03/2014", # dd/mm/yyyy format
+  Persons := [ 
+    rec( 
+      LastName      := "Joyner",
+      FirstNames    := "David",
+      IsAuthor      := true,
+      IsMaintainer  := true,
+      Email         := "wdjoyner@gmail.com",
+      WWWHome       := "https://sites.google.com/site/wdjoyner/toric",
+      PostalAddress := Concatenation( [
+                         "W. David Joyner\n",
+                         "Mathematics Department\n",
+                         "U. S. Naval Academy\n",
+                         "Annapolis, MD 21402\n",
+                         "USA" ] ),
+      Place         := "Annapolis",
+      Institution   := "U. S. Naval Academy"
+    )
+  ],  
 
-Persons := [
-  rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
-    IsAuthor      := true,
-    IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
-    PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universität Gießen\n",
-                       "Arndtstraße 2\n",
-                       "35392 Gießen\n",
-                       "Germany" ),
-    Place         := "Gießen",
-    Institution   := "Justus-Liebig-Universität Gießen"
+  Status  := "accepted",
+  CommunicatedBy 
+          := "Gerhard Hiss (Aachen)",
+  AcceptDate 
+          := "10/2005",
+
+
+  PackageWWWHome := "http://www.opensourcemath.org/toric/",
+  README_URL := Concatenation( ~.PackageWWWHome, "README.toric" ),
+  PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+  ArchiveURL := Concatenation( ~.PackageWWWHome, "toric", ~.Version ),
+  ArchiveFormats := ".tar.gz",
+
+  AbstractHTML := 
+    "<span class=\"pkgname\">toric</span> is a <span class=\"pkgname\">GAP</span>package for computing with toric varieties.",
+
+
+  PackageDoc := rec(
+    BookName  := "toric",
+    ArchiveURLSubset := ["doc"],
+    HTMLStart := "doc/chap0.html",
+    PDFFile   := "doc/manual.pdf",
+    SixFile   := "doc/manual.six",
+    LongTitle := "toric variety package",
+    Autoload := true
   ),
 
-  rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
-    IsAuthor      := true,
-    IsMaintainer  := false,
-    #Email         := "author@example.com",
+  Dependencies := rec(
+    GAP := ">= 4.5",
+    NeededOtherPackages := [],
+    SuggestedOtherPackages := [],
+    ExternalConditions := []
   ),
 
-  rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
-  ),
-],
+  AvailabilityTest := ReturnTrue,
 
-Status := "other",
+  Autoload := false,
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "fingolfin",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
+  TestFile := "tst/testall.g",
 
-PackageWWWHome := Concatenation("http://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
+  Keywords := [ "toric variety", "cone", "fan", "Riemann-Roch space" ],
 
-ArchiveFormats := ".tar.gz .tar.bz2",
+  AutoDoc := rec(
+    TitlePage := rec(
+      Copyright := "&copyright; 2004-2017 David Joyner.",
+      Acknowledgements :=
+"""
+The code for the <Package>toric</Package> package was written during the
+summer of 2002. 
+It was put into &GAP; package format in the summer of 2004.
 
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub pages.",
+<Package>toric</Package> is released under the 
+GNU General Public License (GPL), version 2 or better (at your choice).
+This file is part of <Package>toric</Package>, though as documentation
+it is released under the
+GNU Free Documentation License
+(see <URL>http://www.gnu.org/licenses/licenses.html#FDL</URL>).
+<P/>
+    <Package>toric</Package> is free software; you can redistribute it and/or modify
+    it under the terms of the MIT License.
+<P/>
+    <Package>toric</Package> is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    MIT License for more details.
+<P/>
 
-PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
-  ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0.html",
-  PDFFile   := "doc/manual.pdf",
-  SixFile   := "doc/manual.six",
-  LongTitle := "A GitHubPages generator for GAP packages",
-),
-
-# The following dependencies are fake and for testing / demo purposes
-Dependencies := rec(
-  GAP := ">=4.5.5",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
-  ExternalConditions := []
-),
-
-AvailabilityTest := ReturnTrue,
-
-Keywords := ["GitHub pages", "GAP"]
-
+<P/>This documentation was prepared with the 
+<Package>GAPDoc</Package> package of Frank Lübeck and Max Neunhöffer. 
+Moreover, a bug in toric 1.8 was fixed with the help of Max Horn, and this
+documentation was modified accordingly. Finally, I thank Alexander Konovalov
+and Max Horn for transferring this package to the new GIT repo.
+"""
+        ),
+    ),
 ));
-
-

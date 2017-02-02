@@ -1,0 +1,151 @@
+  
+  [1X4 [33X[0;0YToric varieties [22XX(∆)[122X[101X[1X[133X[101X
+  
+  [33X[0;0YThis  chapter  concerns  [5Xtoric[105X  commands  which  deal  with  certain objects
+  associated to the (non-affine) toric varieties [22XX(∆)[122X.[133X
+  
+  
+  [1X4.1 [33X[0;0YRiemann-Roch spaces[133X[101X
+  
+  [33X[0;0YLet [22X∆[122X denote a complete nonsingular fan.[133X
+  
+  [1X4.1-1 DivisorPolytope[101X
+  
+  [29X[2XDivisorPolytope[102X( [3XD[103X, [3XRays[103X ) [32X function
+  
+  [33X[0;0Y[13XInput[113X:  [3XRays[103X is the list of smallest integer vectors in the rays for the fan
+  [22X∆[122X which determine the Weil divisors of [22XX(∆)[122X.[133X
+  [33X[0;0Y[3XD[103X is the list of coefficients for the a Weil divisor.[133X
+  [33X[0;0Y[13XOutput[113X: the linear expressions in the affine coordinates of the space of the
+  cone which must be positive for a point to be in the desired polytope.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDivisorPolytope([6,6,0],[[2,-1],[-1,2],[-1,-1]]);[127X[104X
+    [4X[28X[ 2*x_1-x_2+6, -x_1+2*x_2+6, -x_1-x_2 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSee also Example 6.13 in [JV02].[133X
+  
+  [1X4.1-2 DivisorPolytopeLatticePoints[101X
+  
+  [29X[2XDivisorPolytopeLatticePoints[102X( [3XD[103X, [3XDelta[103X, [3XRays[103X ) [32X function
+  
+  [33X[0;0Y[13XInput[113X: [3XDelta[103X is the fan[133X
+  [33X[0;0Y[3XRays[103X is the [13Xordered[113X list of rays for [3XDelta[103X[133X
+  [33X[0;0Y[3XD[103X is the list of coefficients for a Weil divisor.[133X
+  [33X[0;0Y[13XOutput[113X: the list of points in [22XP_D ∩ L_0^*[122X which parameterize the elements in
+  the  Riemann-Roch  space  [22XL(D)[122X,  where [22XP_D[122X is the polytope associated to the
+  divisor [22XD[122X (see [10XDivisorPolytope[110X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDiv:=[6,6,0];; Rays:=[[2,-1],[-1,2],[-1,-1]];;[127X[104X
+    [4X[25Xgap>[125X [27XDelta0:=[[[2,-1],[-1,2]],[[-1,2],[-1,-1]],[[-1,-1],[2,-1]]];;[127X[104X
+    [4X[25Xgap>[125X [27XP_Div:=DivisorPolytopeLatticePoints(Div,Delta0,Rays);[127X[104X
+    [4X[28X[ [ -6, -6 ], [ -5, -5 ], [ -5, -4 ], [ -4, -5 ], [ -4, -4 ], [ -4, -3 ],[128X[104X
+    [4X[28X  [ -4, -2 ], [ -3, -4 ], [ -3, -3 ], [ -3, -2 ], [ -3, -1 ], [ -3, 0 ],[128X[104X
+    [4X[28X  [ -2, -4 ], [ -2, -3 ], [ -2, -2 ], [ -2, -1 ], [ -2, 0 ], [ -2, 1 ],[128X[104X
+    [4X[28X  [ -2, 2 ], [ -1, -3 ], [ -1, -2 ], [ -1, -1 ], [ -1, 0 ], [ -1, 1 ],[128X[104X
+    [4X[28X  [ 0, -3 ], [ 0, -2 ], [ 0, -1 ], [ 0, 0 ], [ 1, -2 ], [ 1, -1 ], [ 2, -2 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X4.1-3 RiemannRochBasis[101X
+  
+  [29X[2XRiemannRochBasis[102X( [3XD[103X, [3XDelta[103X, [3XRays[103X ) [32X function
+  
+  [33X[0;0Y[13XInput[113X: [3XDelta[103X is a complete and nonsingular fan[133X
+  [33X[0;0Y[3XD[103X is the list of coefficients for the Weil divisor[133X
+  [33X[0;0Y[3XRays[103X is a list of rays for the fan used to describe the Weil divisors.[133X
+  [33X[0;0Y[13XOutput[113X:  A  basis  (a  list  of monomials) for the Riemann-Roch space of the
+  divisor represented by [3XD[103X.[133X
+  
+  [33X[0;0YFor  details  on how the Weil divisors can be expressed in terms of the rays
+  of the fan, please see section 3.3 in [Ful93]. This procedure does not check
+  if the fan is complete and nonsingular.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDiv:=[6,6,0];; Rays:=[[2,-1],[-1,2],[-1,-1]];;[127X[104X
+    [4X[25Xgap>[125X [27XDelta0:=[[[2,-1],[-1,2]],[[-1,2],[-1,-1]],[[-1,-1],[2,-1]]];;[127X[104X
+    [4X[25Xgap>[125X [27XRiemannRochBasis(Div,Delta0,Rays);[127X[104X
+    [4X[28X[ 1/(x_1^6*x_2^6), 1/(x_1^5*x_2^5), 1/(x_1^5*x_2^4), 1/(x_1^4*x_2^5),[128X[104X
+    [4X[28X  1/(x_1^4*x_2^4), 1/(x_1^4*x_2^3), 1/(x_1^4*x_2^2), 1/(x_1^3*x_2^4),[128X[104X
+    [4X[28X  1/(x_1^3*x_2^3), 1/(x_1^3*x_2^2), 1/(x_1^3*x_2), 1/x_1^3, 1/(x_1^2*x_2^4),[128X[104X
+    [4X[28X  1/(x_1^2*x_2^3), 1/(x_1^2*x_2^2), 1/(x_1^2*x_2), 1/x_1^2, x_2/x_1^2,[128X[104X
+    [4X[28X  x_2^2/x_1^2, 1/(x_1*x_2^3), 1/(x_1*x_2^2), 1/(x_1*x_2), 1/x_1, x_2/x_1,[128X[104X
+    [4X[28X  1/x_2^3, 1/x_2^2, 1/x_2, 1, x_1/x_2^2, x_1/x_2, x_1^2/x_2^2 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.2 [33X[0;0YTopological invariants[133X[101X
+  
+  [33X[0;0YThroughout this section, [22XX(∆)[122X [13Xmust be non-singular[113X.[133X
+  
+  [1X4.2-1 EulerCharacteristic[101X
+  
+  [29X[2XEulerCharacteristic[102X( [3XDelta[103X ) [32X function
+  
+  [33X[0;0Y[13XInput[113X:  [3XDelta[103X  is  a  nonsingular  fan  of cones, represented by its list of
+  maximal cones.[133X
+  [33X[0;0Y[13XOutput[113X: the Euler characteristic of the toric variety [22XX(∆)[122X, where [22X∆[122X is a fan
+  determined by [3XDelta[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCones:=[[[2,-1],[-1,2]],[[-1,2],[-1,-1]],[[-1,-1],[2,-1]]];;[127X[104X
+    [4X[25Xgap>[125X [27XEulerCharacteristic(Cones);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote: [22XX(∆)[122X [13Xmust be non-singular[113X here.[133X
+  
+  [1X4.2-2 BettiNumberToric[101X
+  
+  [29X[2XBettiNumberToric[102X( [3XDelta[103X, [3Xk[103X ) [32X function
+  
+  [33X[0;0Y[13XInput[113X: [3XDelta[103X represents a nonsingular fan [22X∆[122X (represented by maximal cones),[133X
+  [33X[0;0Y[3Xk[103X is an integer.[133X
+  [33X[0;0Y[13XOutput[113X: the [3Xk[103X-th Betti number of the toric variety [22XX(∆)[122X.[133X
+  
+  [33X[0;0YThe [10XBettiNumberToric[110X procedure does not check if [3XDelta[103X is nonsingular. It is
+  possible  that this procedure outputs nonsense when [3XDelta[103X is not represented
+  by maximal cones or is nonsingular.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCones:=[[[2,-1],[-1,2]],[[-1,2],[-1,-1]],[[-1,-1],[2,-1]]];;[127X[104X
+    [4X[25Xgap>[125X [27XBettiNumberToric(Cones,1);[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27XBettiNumberToric(Cones,2);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XCones:=[[[2,-1],[-1,1]],[[-1,1],[-1,0]],[[-1,0],[2,-1]]];;[127X[104X
+    [4X[25Xgap>[125X [27XBettiNumberToric(Cones,1);[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27XBettiNumberToric(Cones,2);[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNot  to  be  confused  with  the  Betti number of a polycyclically presented
+  torsion free group, already available in [5XGAP[105X.[133X
+  
+  
+  [1X4.3 [33X[0;0YPoints over a finite field[133X[101X
+  
+  [1X4.3-1 CardinalityOfToricVariety[101X
+  
+  [29X[2XCardinalityOfToricVariety[102X( [3XCones[103X, [3Xq[103X ) [32X function
+  
+  [33X[0;0Y[13XInput[113X: [3XCones[103X is the list of maximal cones of a fan [22X∆[122X, [3Xq[103X is a prime power.[133X
+  [33X[0;0Y[13XOutput[113X:  The  size  of the set of [22XGF(q)[122X-rational points of the toric variety
+  [22XX(∆)[122X.[133X
+  
+  [33X[0;0YNote: [22XX(∆)[122X [13Xmust be non-singular[113X here.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCones:=[[[2,-1],[-1,2]],[[-1,2],[-1,-1]],[[-1,-1],[2,-1]]];;[127X[104X
+    [4X[25Xgap>[125X [27XCardinalityOfToricVariety(Cones,3);[127X[104X
+    [4X[28X13[128X[104X
+    [4X[25Xgap>[125X [27XCardinalityOfToricVariety(Cones,4);[127X[104X
+    [4X[28X21[128X[104X
+    [4X[25Xgap>[125X [27XCardinalityOfToricVariety(Cones,5);[127X[104X
+    [4X[28X31[128X[104X
+    [4X[25Xgap>[125X [27XCardinalityOfToricVariety(Cones,7);[127X[104X
+    [4X[28X57[128X[104X
+  [4X[32X[104X
+  

@@ -1,1 +1,96 @@
-Placeholder
+  
+  
+                                    [1X Toric [101X
+  
+  
+         [1X toric varieties and some combinatorial geometry computations [101X
+  
+  
+                                      1.9
+  
+  
+                                   01/02/2017
+  
+  
+                                  David Joyner
+  
+  
+  
+  David Joyner
+      Email:    [7Xmailto:wdjoyner@gmail.com[107X
+      Homepage: [7Xhttps://sites.google.com/site/wdjoyner/toric[107X
+      Address:  [33X[0;14YW. David Joyner[133X
+                [33X[0;14YMathematics Department[133X
+                [33X[0;14YU. S. Naval Academy[133X
+                [33X[0;14YAnnapolis, MD 21402[133X
+                [33X[0;14YUSA[133X
+  
+  
+  
+  -------------------------------------------------------
+  [1XCopyright[101X
+  [33X[0;0Y© 2004-2017 David Joyner.[133X
+  
+  
+  -------------------------------------------------------
+  [1XAcknowledgements[101X
+  [33X[0;0YThe code for the [5Xtoric[105X package was written during the summer of 2002. It was
+  put  into  [5XGAP[105X package format in the summer of 2004. [5Xtoric[105X is released under
+  the  GNU General Public License (GPL), version 2 or better (at your choice).
+  This file is part of [5Xtoric[105X, though as documentation it is released under the
+  GNU            Free           Documentation           License           (see
+  [7Xhttp://www.gnu.org/licenses/licenses.html#FDL[107X).[133X
+  
+  [33X[0;0Y[5Xtoric[105X  is  free software; you can redistribute it and/or modify it under the
+  terms of the MIT License.[133X
+  
+  [33X[0;0Y[5Xtoric[105X  is  distributed  in  the hope that it will be useful, but WITHOUT ANY
+  WARRANTY;  without  even  the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE. See the MIT License for more details.[133X
+  
+  [33X[0;0YThis  documentation was prepared with the [5XGAPDoc[105X package of Frank Lübeck and
+  Max  Neunhöffer. Moreover, a bug in toric 1.8 was fixed with the help of Max
+  Horn,  and  this  documentation  was  modified accordingly. Finally, I thank
+  Alexander  Konovalov  and  Max Horn for transferring this package to the new
+  GIT repo.[133X
+  
+  
+  -------------------------------------------------------
+  
+  
+  [1XContents (toric)[101X
+  
+  1 [33X[0;0YIntroduction[133X
+    1.1 [33X[0;0YIntroduction to the [5Xtoric[105X package[133X
+    1.2 [33X[0;0YIntroduction to constructing toric varieties[133X
+      1.2-1 [33X[0;0YGeneralities[133X
+      1.2-2 [33X[0;0YBasic combinatorial geometry constructions[133X
+      1.2-3 [33X[0;0YBasic affine toric variety constructions[133X
+      1.2-4 [33X[0;0YRiemann-Roch spaces and related constructions[133X
+  2 [33X[0;0YCones and semigroups[133X
+    2.1 [33X[0;0YCones[133X
+      2.1-1 InsideCone
+      2.1-2 InDualCone
+      2.1-3 PolytopeLatticePoints
+      2.1-4 Faces
+      2.1-5 ConesOfFan
+      2.1-6 NumberOfConesOfFan
+      2.1-7 ToricStar
+    2.2 [33X[0;0YSemigroups[133X
+      2.2-1 DualSemigroupGenerators
+  3 [33X[0;0YAffine toric varieties[133X
+    3.1 [33X[0;0YIdeals defining affine toric varieties[133X
+      3.1-1 EmbeddingAffineToricVariety
+  4 [33X[0;0YToric varieties [22XX(∆)[122X[133X
+    4.1 [33X[0;0YRiemann-Roch spaces[133X
+      4.1-1 DivisorPolytope
+      4.1-2 DivisorPolytopeLatticePoints
+      4.1-3 RiemannRochBasis
+    4.2 [33X[0;0YTopological invariants[133X
+      4.2-1 EulerCharacteristic
+      4.2-2 BettiNumberToric
+    4.3 [33X[0;0YPoints over a finite field[133X
+      4.3-1 CardinalityOfToricVariety
+  
+  
+  [32X

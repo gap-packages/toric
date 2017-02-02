@@ -8,8 +8,8 @@ SetPackageInfo( rec(
 
   PackageName := "Toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.9",
-  Date    := "01/02/2017",
+  Version := "1.9.0",
+  Date    := "02/02/2017",
 
   Persons := [ 
     rec( 
@@ -36,11 +36,17 @@ SetPackageInfo( rec(
   AcceptDate 
           := "10/2005",
 
-
-  PackageWWWHome := "http://www.opensourcemath.org/toric/",
-  README_URL := Concatenation( ~.PackageWWWHome, "README.toric" ),
-  PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-  ArchiveURL := Concatenation( ~.PackageWWWHome, "toric", ~.Version ),
+  SourceRepository := rec(
+      Type := "git",
+      URL := Concatenation( "https://github.com/gap-packages/", ~.PackageName ),
+  ),
+  IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+  PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", ~.PackageName ),
+  README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
+  PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
+  ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                   "/releases/download/v", ~.Version,
+                                   "/", ~.PackageName, "-", ~.Version ),
   ArchiveFormats := ".tar.gz",
 
   AbstractHTML := 

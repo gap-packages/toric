@@ -8,8 +8,8 @@ SetPackageInfo( rec(
 
   PackageName := "Toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.9.0",
-  Date    := "02/02/2017",
+  Version := "1.9.1",
+  Date    := "03/02/2017",
 
   Persons := [ 
     rec( 
@@ -86,13 +86,6 @@ SetPackageInfo( rec(
 The code for the <Package>toric</Package> package was written during the
 summer of 2002. 
 It was put into &GAP; package format in the summer of 2004.
-
-<Package>toric</Package> is released under the 
-GNU General Public License (GPL), version 2 or better (at your choice).
-This file is part of <Package>toric</Package>, though as documentation
-it is released under the
-GNU Free Documentation License
-(see <URL>http://www.gnu.org/licenses/licenses.html#FDL</URL>).
 <P/>
     <Package>toric</Package> is free software; you can redistribute it and/or modify
     it under the terms of the MIT License.
@@ -107,7 +100,7 @@ GNU Free Documentation License
 <Package>GAPDoc</Package> package of Frank Lübeck and Max Neunhöffer. 
 Moreover, a bug in toric 1.8 was fixed with the help of Max Horn, and this
 documentation was modified accordingly. Finally, I thank Alexander Konovalov
-and Max Horn for transferring this package to the new GIT repo.
+and Max Horn for transferring this package to the new Git repository.
 """
         ),
     ),

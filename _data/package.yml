@@ -14,7 +14,7 @@ maintainers:
 GAP: ">= 4.5"
 
 www: https://gap-packages.github.io/toric
-readme: https://gap-packages.github.io/toric/README.md
+readme: README.md
 packageinfo: https://gap-packages.github.io/toric/PackageInfo.g
 
 downloads:

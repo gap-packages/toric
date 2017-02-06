@@ -6,7 +6,7 @@ gap> LoadPackage("toric");
 true
 
 #
-# Chapter 2: 2 Cones and semigroups
+# Chapter 2: 2 cones and semigroups
 #
 
 #
@@ -109,11 +109,11 @@ gap> DivisorPolytope([6,6,0],[[2,-1],[-1,2],[-1,-1]]);
 [ 2*x_1-x_2+6, -x_1+2*x_2+6, -x_1-x_2 ]
 
 #
-gap> Cones:=[[[2,-1],[-1,2]],[[-1,2],[-1,-1]],[[-1,-1],[2,-1]]];;
-gap> Div:=[6,6,0];; Rays:=[[2,-1],[-1,2],[-1,-1]];;
+gap> cones:=[[[2,-1],[-1,2]],[[-1,2],[-1,-1]],[[-1,-1],[2,-1]]];;
+gap> div:=[6,6,0];; rays:=[[2,-1],[-1,2],[-1,-1]];;
 
 #
-gap> P_Div:=DivisorPolytopeLatticePoints(Div,Cones,Rays);
+gap> P_Div:=DivisorPolytopeLatticePoints(div,cones,rays);
 [ [ -6, -6 ], [ -5, -5 ], [ -5, -4 ], [ -4, -5 ], [ -4, -4 ], [ -4, -3 ], 
   [ -4, -2 ], [ -3, -4 ], [ -3, -3 ], [ -3, -2 ], [ -3, -1 ], [ -3, 0 ], 
   [ -2, -4 ], [ -2, -3 ], [ -2, -2 ], [ -2, -1 ], [ -2, 0 ], [ -2, 1 ], 
@@ -121,7 +121,7 @@ gap> P_Div:=DivisorPolytopeLatticePoints(Div,Cones,Rays);
   [ 0, -3 ], [ 0, -2 ], [ 0, -1 ], [ 0, 0 ], [ 1, -2 ], [ 1, -1 ], [ 2, -2 ] ]
 
 #
-gap> RiemannRochBasis(Div,Cones,Rays);
+gap> RiemannRochBasis(div,cones,rays);
 [ 1/(x_1^6*x_2^6), 1/(x_1^5*x_2^5), 1/(x_1^5*x_2^4), 1/(x_1^4*x_2^5), 
   1/(x_1^4*x_2^4), 1/(x_1^4*x_2^3), 1/(x_1^4*x_2^2), 1/(x_1^3*x_2^4), 
   1/(x_1^3*x_2^3), 1/(x_1^3*x_2^2), 1/(x_1^3*x_2), 1/x_1^3, 1/(x_1^2*x_2^4), 
@@ -130,21 +130,21 @@ gap> RiemannRochBasis(Div,Cones,Rays);
   1/x_2^3, 1/x_2^2, 1/x_2, 1, x_1/x_2^2, x_1/x_2, x_1^2/x_2^2 ]
 
 #
-gap> EulerCharacteristic(Cones);
+gap> EulerCharacteristic(cones);
 3
 
 #
-gap> BettiNumberToric(Cones,1);
+gap> BettiNumberToric(cones,1);
 0
-gap> BettiNumberToric(Cones,2);
+gap> BettiNumberToric(cones,2);
 1
 
 #
-gap> CardinalityOfToricVariety(Cones,3);
+gap> CardinalityOfToricVariety(cones,3);
 13
-gap> CardinalityOfToricVariety(Cones,4);
+gap> CardinalityOfToricVariety(cones,4);
 21
-gap> CardinalityOfToricVariety(Cones,5);
+gap> CardinalityOfToricVariety(cones,5);
 31
-gap> CardinalityOfToricVariety(Cones,7);
+gap> CardinalityOfToricVariety(cones,7);
 57

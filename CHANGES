@@ -1,6 +1,15 @@
 In this file we record the changes since the first release of
 the TORIC package.
 
+Toric 1.9.3 - (2017-02-06)
+  - Fixed conflict between tests and some other packages
+
+Toric 1.9.2 - (2017-02-04)
+  - Fixed various URLs
+
+Toric 1.9.1 - (2017-02-03)
+  - Fixed license information
+
 Toric 1.9.0 - (2017-02-02)
   - Moved package to GitHub
   - Added MIT license

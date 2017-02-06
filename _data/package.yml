@@ -1,6 +1,6 @@
 name: Toric
-version: 1.9.2
-date: 04/02/2017
+version: 1.9.3
+date: 06/02/2017
 description: toric varieties and some combinatorial geometry computations
 
 authors:
@@ -19,7 +19,7 @@ packageinfo: https://gap-packages.github.io/toric/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/toric/releases/download/v1.9.2/Toric-1.9.2.tar.gz
+      url: https://github.com/gap-packages/toric/releases/download/v1.9.3/Toric-1.9.3.tar.gz
 
 abstract: <span class="pkgname">toric</span> is a <span class="pkgname">GAP</span>package for computing with toric varieties.
 

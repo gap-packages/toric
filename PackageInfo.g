@@ -8,8 +8,8 @@ SetPackageInfo( rec(
 
   PackageName := "Toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.9.3",
-  Date    := "06/02/2017",
+  Version := "1.9.4",
+  Date    := "07/03/2017",
 
   Persons := [ 
     rec( 
@@ -18,7 +18,7 @@ SetPackageInfo( rec(
       IsAuthor      := true,
       IsMaintainer  := true,
       Email         := "wdjoyner@gmail.com",
-      WWWHome       := "https://sites.google.com/site/wdjoyner/toric",
+      WWWHome       := "https://sites.google.com/site/wdjoyner/",
       PostalAddress := Concatenation( [
                          "W. David Joyner\n",
                          "Mathematics Department\n",

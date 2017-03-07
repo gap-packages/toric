@@ -6,10 +6,10 @@
          [1X toric varieties and some combinatorial geometry computations [101X
   
   
-                                     1.9.3
+                                     1.9.4
   
   
-                                6 February 2017
+                                   07/03/2017
   
   
                                   David Joyner
@@ -18,7 +18,7 @@
   
   David Joyner
       Email:    [7Xmailto:wdjoyner@gmail.com[107X
-      Homepage: [7Xhttps://sites.google.com/site/wdjoyner/toric[107X
+      Homepage: [7Xhttps://sites.google.com/site/wdjoyner/[107X
       Address:  [33X[0;14YW. David Joyner[133X
                 [33X[0;14YMathematics Department[133X
                 [33X[0;14YU. S. Naval Academy[133X

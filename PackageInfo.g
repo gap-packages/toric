@@ -17,7 +17,7 @@ SetPackageInfo( rec(
       LastName      := "Joyner",
       FirstNames    := "David",
       IsAuthor      := true,
-      IsMaintainer  := true,
+      IsMaintainer  := false,
       Email         := "wdjoyner@gmail.com",
       WWWHome       := "https://sites.google.com/site/wdjoyner/",
       PostalAddress := Concatenation( [

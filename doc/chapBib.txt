@@ -5,9 +5,10 @@
   [[20XFul93[120X]  [16XFulton,  W.[116X,  [17XIntroduction to toric varieties[117X, Princeton University
   Press (1993).
   
-  [[20XCM09[120X]  [16XJ.  Fields  D.  Joyner  Cen  Tjhai  R. Miller T. Boothby R. Baart J.
-  Cramwinckel,  E.  R. and E. Minkes, [116X, [17XManual for GUAVA - an error-correcting
-  codes package for GAP, version 3.10.[117X, www.gap-system.org/pkg/guava/ (2009).
+  [[20XJFDJCTRMTBRBJCM09[120X]  [16XJ.  Fields  D. Joyner Cen Tjhai R. Miller T. Boothby R.
+  Baart  J.  Cramwinckel,  E.  R.  and  E.  Minkes,  [116X,  [17XManual  for GUAVA - an
+  error-correcting     codes     package     for     GAP,    version    3.10.[117X,
+  www.gap-system.org/pkg/guava/ (2009).
   
   [[20XJV02[120X]  [16XJoyner,  D. and Verrill, H.[116X, [17X\it Notes on toric varieties, posted at
   Math ArXiV, http://front.math.ucdavis.edu/math.AG/0208065[117X, [18X(appeared as {\it

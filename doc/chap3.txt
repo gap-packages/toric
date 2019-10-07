@@ -9,7 +9,7 @@
   
   [1X3.1-1 EmbeddingAffineToricVariety[101X
   
-  [29X[2XEmbeddingAffineToricVariety[102X( [3XL[103X ) [32X function
+  [33X[1;0Y[29X[2XEmbeddingAffineToricVariety[102X( [3XL[103X ) [32X function[133X
   
   [33X[0;0Y[13XInput[113X: [3XL[103X is a list generating a cone (as in [10XDualSemigroupGenerators[110X).[133X
   [33X[0;0Y[13XOutput[113X:  the  toroidal  embedding  of [22XX=Spec(I)[122X, where I is the ideal of the

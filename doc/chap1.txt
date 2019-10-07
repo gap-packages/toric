@@ -9,8 +9,8 @@
   since  often  times  questions  about a toric variety can be reformulated in
   terms  of  combinatorial  geometry.  Some  coding theory commands related to
   toric  varieties  are  contained in the error-correcting codes [5XGUAVA[105X package
-  (for  example,  the  command [10XToricCode[110X). We refer to the [5XGUAVA[105X manual [CM09]
-  and the expository paper [JV02] for more details.[133X
+  (for  example,  the  command  [10XToricCode[110X).  We  refer  to  the  [5XGUAVA[105X  manual
+  [JFDJCTRMTBRBJCM09] and the expository paper [JV02] for more details.[133X
   
   [33X[0;0YThe  [5Xtoric[105X  package  also  contains  several  commands  unrelated  to  toric
   varieties  (mostly  for  list manipulations). These will not be described in
@@ -38,8 +38,9 @@
   [12Xbinomial equation[112X in [22XR[122X is one of the form[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Yx_1^{k_1}...x_n^{k_n}=x_1^{\ell_1}...x_n^{\ell_n},[133X [124X[133X
+  [24X[33X[0;6Yx_1^{k_1}...x_n^{k_n}=x_1^{\ell_1}...x_n^{\ell_n},[133X
   
+  [124X
   
   [33X[0;0Ywhere  [22Xk_i  ≥ 0, ℓ_j ≥ 0[122X are integers. A binomial variety is a subvariety of
   affine  [22Xn[122X-space  [22XA_F^n[122X defined by a finite set of binomial equations (such a
@@ -61,9 +62,10 @@
   denote the (standard) inner product on [22XV[122X. Let[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YL_0^*={\rm Hom}(L_0,Z)=\{ v\in V\ |\ \langle v,w \rangle \in Z, \
-        \forall w\in L_0\}[133X [124X[133X
+  [24X[33X[0;6YL_0^*={\rm  Hom}(L_0,Z)=\{  v\in  V\ |\ \langle v,w \rangle \in Z, \ \forall
+  w\in L_0\}[133X
   
+  [124X
   
   [33X[0;0Ydenote  the [12Xdual lattice[112X, so (fixing the standard basis [22Xe_1^*[122X,...,[22Xe_n^*[122X dual
   to the [22Xf_1[122X,...,[22Xf_n[122X) [22XL_0^*[122X may be identified with [22XZ^n[122X.[133X
@@ -71,8 +73,9 @@
   [33X[0;0YA [12Xcone[112X in [22XV[122X is a set [22Xσ[122X of the form[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\sigma=\{a_1v_1+...+a_mv_m\ |\ a_i\geq 0\}\subset V,[133X [124X[133X
+  [24X[33X[0;6Y\sigma=\{a_1v_1+...+a_mv_m\ |\ a_i\geq 0\}\subset V,[133X
   
+  [124X
   
   [33X[0;0Ywhere  [22Xv_1,...,v_m  ∈ V[122X is a given collection of vectors, called (semigroup)
   [12Xgenerators[112X  of [22Xσ[122X. A [12Xrational cone[112X is one where [22Xv_1,...,v_m ∈ L_0[122X. A [12Xstrongly
@@ -93,9 +96,10 @@
   [33X[0;0YIf [22Xσ[122X is a cone then the [12Xdual cone[112X is defined by[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\sigma^* =\{w \in L_0^*\otimes Q \ |\ \langle v,w \rangle \geq 0,\
-        \forall v\in \sigma\}.[133X [124X[133X
+  [24X[33X[0;6Y\sigma^*  =\{w  \in L_0^*\otimes Q \ |\ \langle v,w \rangle \geq 0,\ \forall
+  v\in \sigma\}.[133X
   
+  [124X
   
   [33X[0;0YThe  [5Xtoric[105X  package can test if a vector is in the dual of a given cone (see
   [10XInDualCone[110X).[133X
@@ -103,9 +107,10 @@
   [33X[0;0YAssociate to the dual cone [22Xσ^*[122X is the semigroup[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YS_\sigma =\sigma^*\cap L_0^* =\{w\in L_0^* \ |\ \langle v,w\rangle
-        \geq 0,\ \forall v\in \sigma\}.[133X [124X[133X
+  [24X[33X[0;6YS_\sigma  =\sigma^*\cap L_0^* =\{w\in L_0^* \ |\ \langle v,w\rangle \geq 0,\
+  \forall v\in \sigma\}.[133X
   
+  [124X
   
   [33X[0;0YThough  [22XL_0^*[122X  has $n$ generators [13Xas a lattice[113X, typically [22XS_σ[122X will have more
   than  [22Xn[122X  generators  [13Xas a semigroup[113X. The [5Xtoric[105X package can compute a minimal
@@ -143,8 +148,9 @@
   [33X[0;0YLet[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YR_\sigma = F [S_\sigma][133X [124X[133X
+  [24X[33X[0;6YR_\sigma = F [S_\sigma][133X
   
+  [124X
   
   [33X[0;0Ydenote  the  ``group algebra'' of this semigroup. It is a finitely generated
   commutative  F-algebra.  It is in fact integrally closed ([Ful93], page 29).
@@ -160,8 +166,9 @@
   [33X[0;0YLet[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YU_\sigma={\rm Spec}\ R_\sigma.[133X [124X[133X
+  [24X[33X[0;6YU_\sigma={\rm Spec}\ R_\sigma.[133X
   
+  [124X
   
   [33X[0;0YThis defines an [12Xaffine toric variety[112X (associated to [22Xσ[122X). It is known that the
   coordinate  ring  [22XR_σ[122X  of  the  affine  toric variety [22XU_σ[122X has the form [22XR_σ =
@@ -212,9 +219,10 @@
   divisor [22XD=d_1D_1+...+d_kD_k[122X, is the [12Xpolytope[112X[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YP_D = \{ x=(x_1,...,x_n)\ |\ \langle x,v_i \rangle \geq -d_i, \
-        \forall 1 \leq i \leq k\}.[133X [124X[133X
+  [24X[33X[0;6YP_D  =  \{  x=(x_1,...,x_n)\ |\ \langle x,v_i \rangle \geq -d_i, \ \forall 1
+  \leq i \leq k\}.[133X
   
+  [124X
   
   [33X[0;0YThe  [5Xtoric[105X package can compute [22XP_D[122X (see [10XDivisorPolytope[110X), as well as the set
   of    all    lattice    points    contained    in    this    polytope   (see

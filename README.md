@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/gap-packages/toric.svg)](https://travis-ci.org/gap-packages/toric)
+[![Code Coverage](https://codecov.io/github/gap-packages/toric/coverage.svg)](https://codecov.io/gh/gap-packages/toric)
+
 The toric package for toric varieties
 =====================================
 

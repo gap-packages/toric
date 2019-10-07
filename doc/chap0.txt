@@ -6,10 +6,10 @@
          [1X toric varieties and some combinatorial geometry computations [101X
   
   
-                                     1.9.4
+                                     1.9.5
   
   
-                                   07/03/2017
+                                 7 October 2019
   
   
                                   David Joyner

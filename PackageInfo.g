@@ -8,15 +8,16 @@ SetPackageInfo( rec(
 
   PackageName := "Toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.9.4",
-  Date    := "07/03/2017",
+  Version := "1.9.5",
+  Date    := "07/10/2019", # dd/mm/yyyy format
+  License := "MIT",
 
   Persons := [ 
     rec( 
       LastName      := "Joyner",
       FirstNames    := "David",
       IsAuthor      := true,
-      IsMaintainer  := true,
+      IsMaintainer  := false,
       Email         := "wdjoyner@gmail.com",
       WWWHome       := "https://sites.google.com/site/wdjoyner/",
       PostalAddress := Concatenation( [
@@ -27,7 +28,15 @@ SetPackageInfo( rec(
                          "USA" ] ),
       Place         := "Annapolis",
       Institution   := "U. S. Naval Academy"
-    )
+    ),
+
+    rec(
+      LastName      := "GAP Team",
+      FirstNames    := "The",
+      IsAuthor      := false,
+      IsMaintainer  := true,
+      Email         := "support@gap-system.org",
+    ),
   ],  
 
   Status  := "accepted",

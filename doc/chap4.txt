@@ -11,7 +11,7 @@
   
   [1X4.1-1 DivisorPolytope[101X
   
-  [29X[2XDivisorPolytope[102X( [3XD[103X, [3XRays[103X ) [32X function
+  [33X[1;0Y[29X[2XDivisorPolytope[102X( [3XD[103X, [3XRays[103X ) [32X function[133X
   
   [33X[0;0Y[13XInput[113X:  [3XRays[103X is the list of smallest integer vectors in the rays for the fan
   [22X∆[122X which determine the Weil divisors of [22XX(∆)[122X.[133X
@@ -28,7 +28,7 @@
   
   [1X4.1-2 DivisorPolytopeLatticePoints[101X
   
-  [29X[2XDivisorPolytopeLatticePoints[102X( [3XD[103X, [3XDelta[103X, [3XRays[103X ) [32X function
+  [33X[1;0Y[29X[2XDivisorPolytopeLatticePoints[102X( [3XD[103X, [3XDelta[103X, [3XRays[103X ) [32X function[133X
   
   [33X[0;0Y[13XInput[113X: [3XDelta[103X is the fan[133X
   [33X[0;0Y[3XRays[103X is the [13Xordered[113X list of rays for [3XDelta[103X[133X
@@ -50,7 +50,7 @@
   
   [1X4.1-3 RiemannRochBasis[101X
   
-  [29X[2XRiemannRochBasis[102X( [3XD[103X, [3XDelta[103X, [3XRays[103X ) [32X function
+  [33X[1;0Y[29X[2XRiemannRochBasis[102X( [3XD[103X, [3XDelta[103X, [3XRays[103X ) [32X function[133X
   
   [33X[0;0Y[13XInput[113X: [3XDelta[103X is a complete and nonsingular fan[133X
   [33X[0;0Y[3XD[103X is the list of coefficients for the Weil divisor[133X
@@ -81,7 +81,7 @@
   
   [1X4.2-1 EulerCharacteristic[101X
   
-  [29X[2XEulerCharacteristic[102X( [3XDelta[103X ) [32X function
+  [33X[1;0Y[29X[2XEulerCharacteristic[102X( [3XDelta[103X ) [32X function[133X
   
   [33X[0;0Y[13XInput[113X:  [3XDelta[103X  is  a  nonsingular  fan  of cones, represented by its list of
   maximal cones.[133X
@@ -98,7 +98,7 @@
   
   [1X4.2-2 BettiNumberToric[101X
   
-  [29X[2XBettiNumberToric[102X( [3XDelta[103X, [3Xk[103X ) [32X function
+  [33X[1;0Y[29X[2XBettiNumberToric[102X( [3XDelta[103X, [3Xk[103X ) [32X function[133X
   
   [33X[0;0Y[13XInput[113X: [3XDelta[103X represents a nonsingular fan [22X∆[122X (represented by maximal cones),[133X
   [33X[0;0Y[3Xk[103X is an integer.[133X
@@ -129,7 +129,7 @@
   
   [1X4.3-1 CardinalityOfToricVariety[101X
   
-  [29X[2XCardinalityOfToricVariety[102X( [3XCones[103X, [3Xq[103X ) [32X function
+  [33X[1;0Y[29X[2XCardinalityOfToricVariety[102X( [3XCones[103X, [3Xq[103X ) [32X function[133X
   
   [33X[0;0Y[13XInput[113X: [3XCones[103X is the list of maximal cones of a fan [22X∆[122X, [3Xq[103X is a prime power.[133X
   [33X[0;0Y[13XOutput[113X:  The  size  of the set of [22XGF(q)[122X-rational points of the toric variety

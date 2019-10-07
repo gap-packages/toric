@@ -8,8 +8,8 @@ SetPackageInfo( rec(
 
   PackageName := "Toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.9.4dev",
-  Date    := "07/03/2017", # dd/mm/yyyy format
+  Version := "1.9.5",
+  Date    := "07/10/2019", # dd/mm/yyyy format
   License := "MIT",
 
   Persons := [ 

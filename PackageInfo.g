@@ -108,7 +108,7 @@ It was put into &GAP; package format in the summer of 2004.
 <P/>This documentation was prepared with the 
 <Package>GAPDoc</Package> package of Frank Lübeck and Max Neunhöffer. 
 Moreover, a bug in toric 1.8 was fixed with the help of Max Horn, and this
-documentation was modified accordingly. Finally, I thank Alexander Konovalov
+documentation was modified accordingly. Finally, I thank Olexandr Konovalov
 and Max Horn for transferring this package to the new Git repository.
 """
         ),

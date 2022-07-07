@@ -65,7 +65,7 @@ SetPackageInfo( rec(
   PackageDoc := rec(
     BookName  := "toric",
     ArchiveURLSubset := ["doc"],
-    HTMLStart := "doc/chap0.html",
+    HTMLStart := "doc/chap0_mj.html",
     PDFFile   := "doc/manual.pdf",
     SixFile   := "doc/manual.six",
     LongTitle := "toric variety package",

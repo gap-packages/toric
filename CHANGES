@@ -1,6 +1,11 @@
 In this file we record the changes since the first release of
 the TORIC package.
 
+Toric 1.9.6 - (2024-07-04)
+  - Fix problems with the Gua05 BibTeX entry
+  - Fix building the manual on case sensitive file systems
+  - Minor janitorial changes
+
 Toric 1.9.5 - (2019-10-07)
   - Transferred package maintenance to the GAP team
   - Minor janitorial changes

@@ -9,8 +9,8 @@
   since  often  times  questions  about a toric variety can be reformulated in
   terms  of  combinatorial  geometry.  Some  coding theory commands related to
   toric  varieties  are  contained in the error-correcting codes [5XGUAVA[105X package
-  (for  example,  the  command  [10XToricCode[110X).  We  refer  to  the  [5XGUAVA[105X  manual
-  [JFDJCTRMTBRBJCM09] and the expository paper [JV02] for more details.[133X
+  (for  example, the command [10XToricCode[110X). We refer to the [5XGUAVA[105X manual [FJT+09]
+  and the expository paper [JV02] for more details.[133X
   
   [33X[0;0YThe  [5Xtoric[105X  package  also  contains  several  commands  unrelated  to  toric
   varieties  (mostly  for  list manipulations). These will not be described in

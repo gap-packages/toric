@@ -1,7 +1,7 @@
 name: Toric
-version: "1.9.5"
+version: "1.9.6"
 license: "MIT"
-date: 2019-10-07
+date: 2024-07-04
 description: |
     toric varieties and some combinatorial geometry computations
 
@@ -21,39 +21,40 @@ packageinfo: https://gap-packages.github.io/toric/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/toric/releases/download/v1.9.5/Toric-1.9.5.tar.gz
+      url: https://github.com/gap-packages/toric/releases/download/v1.9.6/Toric-1.9.6.tar.gz
 
 abstract: |
     <span class="pkgname">toric</span> is a <span class="pkgname">GAP</span>package for computing with toric varieties.
 
 status: accepted
-doc-html: doc/chap0.html
+doc-html: doc/chap0_mj.html
 doc-pdf: doc/manual.pdf
 keywords: |
     toric variety, cone, fan, Riemann-Roch space.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>JT19</span>]   <b class='BibAuthor'>Joyner, D. and GAP Team, T.</b>,
+    [<span class='BibKey'>JT24</span>]   <b class='BibAuthor'>Joyner, D. and GAP Team, T.</b>,
      <i class='BibTitle'>Toric, toric varieties and some combinatorial geometry computations,
-             Version 1.9.5</i>
-     (<span class='BibYear'>2019</span>)<br />
-    (<span class='BibNote'>Refereed GAP package</span>),
+             Version 1.9.6</i>
+     (<span class='BibYear'>2024</span>)<br />
+    (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://gap-packages.github.io/toric">https://gap-packages.github.io/toric</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ Toric1.9.5,
+    @misc{ Toric,
       author =           {Joyner, D. and GAP Team, T.},
       title =            {{Toric},   toric   varieties  and  some  combinatorial
-                          geometry computations, {V}ersion 1.9.5},
-      month =            {Oct},
-      year =             {2019},
-      note =             {Refereed GAP package},
+                          geometry computations, {V}ersion 1.9.6},
+      month =            {Jul},
+      year =             {2024},
+      note =             {GAP package},
       howpublished =     {\href           {https://gap-packages.github.io/toric}
-                          {\texttt{https://gap-packages.github.io/}\discretionary
+                          {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary
                           {}{}{}\texttt{toric}}},
-      keywords =         {toric variety; cone; fan; Riemann-Roch space},
-      printedkey =       {JT19}
+      keywords =         {toric           variety;           cone;          fan;
+                          Riemann\texttt{\symbol{45}}Roch space},
+      printedkey =       {JT24}
     }
 

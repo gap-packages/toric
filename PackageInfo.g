@@ -8,8 +8,8 @@ SetPackageInfo( rec(
 
   PackageName := "Toric",
     Subtitle  := "toric varieties and some combinatorial geometry computations",
-  Version := "1.9.5",
-  Date    := "07/10/2019", # dd/mm/yyyy format
+  Version := "1.9.6",
+  Date    := "04/07/2024", # dd/mm/yyyy format
   License := "MIT",
 
   Persons := [ 
@@ -65,7 +65,7 @@ SetPackageInfo( rec(
   PackageDoc := rec(
     BookName  := "toric",
     ArchiveURLSubset := ["doc"],
-    HTMLStart := "doc/chap0.html",
+    HTMLStart := "doc/chap0_mj.html",
     PDFFile   := "doc/manual.pdf",
     SixFile   := "doc/manual.six",
     LongTitle := "toric variety package",
@@ -108,7 +108,7 @@ It was put into &GAP; package format in the summer of 2004.
 <P/>This documentation was prepared with the 
 <Package>GAPDoc</Package> package of Frank Lübeck and Max Neunhöffer. 
 Moreover, a bug in toric 1.8 was fixed with the help of Max Horn, and this
-documentation was modified accordingly. Finally, I thank Alexander Konovalov
+documentation was modified accordingly. Finally, I thank Olexandr Konovalov
 and Max Horn for transferring this package to the new Git repository.
 """
         ),

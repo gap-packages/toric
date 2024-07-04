@@ -6,10 +6,10 @@
          [1X toric varieties and some combinatorial geometry computations [101X
   
   
-                                     1.9.5
+                                     1.9.6
   
   
-                                 7 October 2019
+                                  4 July 2024
   
   
                                   David Joyner
@@ -47,8 +47,8 @@
   [33X[0;0YThis  documentation was prepared with the [5XGAPDoc[105X package of Frank Lübeck and
   Max  Neunhöffer. Moreover, a bug in toric 1.8 was fixed with the help of Max
   Horn,  and  this  documentation  was  modified accordingly. Finally, I thank
-  Alexander  Konovalov  and  Max Horn for transferring this package to the new
-  Git repository.[133X
+  Olexandr Konovalov and Max Horn for transferring this package to the new Git
+  repository.[133X
   
   
   -------------------------------------------------------

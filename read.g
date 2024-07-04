@@ -7,10 +7,6 @@
 ##
 ##
 
-#############################################################################
-##
-#F  Read calls to load all files.  
-##
 ReadPackage("toric", "lib/util.gi"); 
 ReadPackage("toric", "lib/toric.gi"); 
 

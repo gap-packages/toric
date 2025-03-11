@@ -19,6 +19,7 @@
 /doc/manual.pdf
 /doc/manual.six
 /doc/title.xml
+/doc/_*.xml
 
 /gh-pages/
 /tmp/

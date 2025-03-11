@@ -69,7 +69,6 @@ SetPackageInfo( rec(
     PDFFile   := "doc/manual.pdf",
     SixFile   := "doc/manual.six",
     LongTitle := "toric variety package",
-    Autoload := true
   ),
 
   Dependencies := rec(
@@ -81,7 +80,6 @@ SetPackageInfo( rec(
 
   AvailabilityTest := ReturnTrue,
 
-  Autoload := false,
 
   TestFile := "tst/testall.g",
 

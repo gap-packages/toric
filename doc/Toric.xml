@@ -380,7 +380,7 @@ combinatorial-geometric objects.
 Recall, a <B>cone</B> is a strongly convex polyhedral
 cone (<Cite Key="F93"/>, page 4).
 
-<ManSection Label="InsideCone">
+<ManSection>
    <Func Name="InsideCone" Arg=" v, L "/>
 		   
         <Description>
@@ -423,7 +423,7 @@ v:=[4,-4]; InsideCone(v,L);
 v:=[4,1];  InsideCone(v,L);
 -->
 
-<ManSection Label="InDualCone">
+<ManSection>
    <Func Name="InDualCone" Arg=" v, L "/>
 		   
         <Description>
